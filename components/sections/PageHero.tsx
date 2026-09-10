@@ -1,0 +1,1 @@
+import {ReactNode} from 'react';import {Eyebrow} from '@/components/ui/Eyebrow';export function PageHero({eyebrow,title,copy}:{eyebrow:string;title:ReactNode;copy:string}){return <section className='pageHero section'><Eyebrow>{eyebrow}</Eyebrow><h1>{title}</h1><p>{copy}</p></section>}

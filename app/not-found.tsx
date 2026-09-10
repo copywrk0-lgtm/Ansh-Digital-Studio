@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <main className='notFound section'><span>404</span><h1>Frame not found.</h1><p>The page you’re looking for slipped out of focus.</p><Link href='/'>Back home ↗</Link></main>}

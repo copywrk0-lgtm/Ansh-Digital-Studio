@@ -1,5 +1,8 @@
-# Ansh Digital Studio — Demo
-Standalone concept website by Copywrk.
+# Ansh Digital Studio
 
-## Run locally
-Use any static server, e.g. `npx serve .`.
+Production-structured Next.js demo built by Copywrk.
+
+```bash
+npm install
+npm run dev
+```

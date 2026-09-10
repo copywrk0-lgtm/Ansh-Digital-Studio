@@ -1,0 +1,1 @@
+import Link from 'next/link';import {site} from '@/lib/site';export function Footer(){return <footer className='footer'><Link href='/'><span>A</span> ANSH DIGITAL</Link><p>Concept website · Prepared by Copywrk</p><a href={site.instagram} target='_blank' rel='noreferrer'>Instagram ↗</a></footer>}

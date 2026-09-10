@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';export default function sitemap():MetadataRoute.Sitemap{return ['','/about','/services','/portfolio','/contact'].map(path=>({url:`https://ansh-digital-studio.vercel.app${path}`,lastModified:new Date()}))}
