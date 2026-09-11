@@ -1,13 +1,12 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {services} from '@/data/services';
 import {Eyebrow} from '@/components/ui/Eyebrow';
 import {site} from '@/lib/site';
 
 const featured=[
-  {...services[0],image:'/images/bride-red.jpg',label:'The main story',href:'/portfolio'},
-  {...services[2],image:'/images/couple-stage.jpg',label:'Before the wedding',href:'/portfolio'},
-  {...services[3],image:'/images/wedding-collage-wide.jpg',label:'Motion + sound',href:site.whatsapp},
+  {...services[0],label:'The main story',href:'/portfolio'},
+  {...services[2],label:'Before the wedding',href:'/portfolio'},
+  {...services[3],label:'Motion + sound',href:site.whatsapp},
 ];
 
 export function ServicesSection(){
@@ -19,7 +18,7 @@ export function ServicesSection(){
 
     <div className='serviceShowcase'>
       {featured.map((s,i)=><article className={`serviceFeature serviceFeature${i+1}`} key={s.n}>
-        <div className='serviceFeatureImage'><Image src={s.image} alt={`${s.title} by Ansh Digital Studio`} fill className='cover' quality={84} sizes='(max-width:800px) 100vw, 33vw'/></div>
+        <div className='serviceFeatureImage photoPlaceholder'><div className='photoPlaceholderMark'>ANSH<small>{s.title}</small></div></div>
         <div className='serviceFeatureCopy'>
           <span>{s.n} · {s.label}</span>
           <h3>{s.title}</h3>
