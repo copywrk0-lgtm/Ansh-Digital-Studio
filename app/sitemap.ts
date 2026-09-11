@@ -6,6 +6,6 @@ export default function sitemap():MetadataRoute.Sitemap{
     url:`${site.url}${path}`,
     lastModified:new Date(),
     changeFrequency:path===''?'weekly':'monthly',
-    priority:path===''?1:(path==='/portfolio'||path==='/services')?.9:.7,
+    priority:path===''?1:(path==='/portfolio'||path==='/services')?0.9:0.7,
   }));
 }
