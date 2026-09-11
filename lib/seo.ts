@@ -23,14 +23,12 @@ export const baseMetadata: Metadata = {
       'Warm, people-led wedding photography and videography for celebrations in Delhi and beyond.',
     url: site.url,
     siteName: site.name,
-    images: [{ url: '/images/wedding-collage-wide.jpg', width: 1964, height: 801, alt: 'Wedding photography by Ansh Digital Studio' }],
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Ansh Digital Studio — Wedding Photography in Delhi',
     description: 'Wedding photography, candid portraits, pre-weddings and videography.',
-    images: ['/images/wedding-collage-wide.jpg'],
   },
 };
