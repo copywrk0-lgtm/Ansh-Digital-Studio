@@ -3,6 +3,7 @@ import './globals.css';
 import './polish.css';
 import './final-polish.css';
 import './mobile-first.css';
+import './responsive.css';
 import {Header} from '@/components/layout/Header';
 import {Footer} from '@/components/layout/Footer';
 import {MobileBar} from '@/components/layout/MobileBar';
