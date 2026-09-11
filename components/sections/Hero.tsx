@@ -12,8 +12,8 @@ export function Hero(){
         <h1>Stories,<br/><em>held in light.</em></h1>
         <p>Warm, people-led wedding photography for the rituals, the portraits and the seconds nobody planned.</p>
         <div className='heroActions'>
-          <Link className='heroPrimary' href='/portfolio'>View selected work ↗</Link>
-          <a className='heroSecondary' href={site.whatsapp} target='_blank' rel='noreferrer'>Check your date</a>
+          <a className='heroPrimary' href={site.whatsapp} target='_blank' rel='noreferrer'>Check your wedding date <span>↗</span></a>
+          <Link className='heroSecondary' href='/portfolio'>View the portfolio</Link>
         </div>
       </div>
       <div className='heroFoot'><span>4.8★ · 38 Google reviews</span><span>Available for destination celebrations</span></div>
