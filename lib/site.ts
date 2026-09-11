@@ -17,6 +17,5 @@ export const site = {
   location: 'Laxmi Nagar, Delhi',
   address: 'Block D, Laxmi Nagar, Delhi 110092, India',
   maps: 'https://www.google.com/maps/search/?api=1&query=Ansh+Digital+Studio+Laxmi+Nagar+Delhi',
-  reviews: 'https://www.google.com/search?q=Ansh+Digital+Studio+Laxmi+Nagar+Delhi+reviews',
   url: 'https://anshdigitalstudio.vercel.app',
 };

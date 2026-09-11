@@ -1,25 +1,11 @@
 import {Eyebrow} from '@/components/ui/Eyebrow';
 
 const faqs=[
-  {q:'How far in advance should we book?',a:'For wedding dates, earlier is better — especially in peak season. Share your date on WhatsApp and the studio can confirm availability directly.'},
-  {q:'Do you travel for destination weddings?',a:'Yes. Ansh Digital Studio is based in Delhi and is available for destination celebrations. Travel details are planned around the event schedule and venue.'},
-  {q:'Can we book photography and films together?',a:'Yes. Wedding photography and videography can be planned together so the coverage feels coordinated rather than like two separate teams working around each other.'},
-  {q:'How long does delivery take?',a:'Delivery timing depends on the event and the amount of coverage. The studio confirms the expected timeline before the booking so there is a clear handover plan.'},
-  {q:'Do you offer albums?',a:'Album options can be discussed with the studio based on the event, number of functions and the kind of final presentation you want.'},
+  ['How early should we enquire?','As soon as your date is reasonably fixed. Wedding dates can overlap, so checking availability early gives you more flexibility.'],
+  ['Can we book photography and video together?','Yes. Photography and videography coverage can be planned together so the team works around one timeline.'],
+  ['Do you cover celebrations outside Delhi?','Yes. Destination and outstation celebrations can be discussed based on the venue, dates and coverage needed.'],
+  ['Can coverage be customised?','Yes. Share the functions, timings and priorities, and the coverage can be shaped around the parts of the celebration that matter most.'],
+  ['Do you provide albums?','Yes. Album design can be added after the photographs are selected, with layouts built from the final edited gallery.'],
 ];
 
-export function FaqSection(){
-  return <section className='faq section' aria-labelledby='faq-title'>
-    <div className='faqIntro'>
-      <Eyebrow>Before you book</Eyebrow>
-      <h2 id='faq-title'>A few things<br/><em>people usually ask.</em></h2>
-      <p>Short answers to the questions that normally come up before a wedding photography enquiry.</p>
-    </div>
-    <div className='faqList'>
-      {faqs.map((item,i)=><details key={item.q}>
-        <summary><span>{String(i+1).padStart(2,'0')}</span><strong>{item.q}</strong><b aria-hidden='true'>+</b></summary>
-        <p>{item.a}</p>
-      </details>)}
-    </div>
-  </section>;
-}
+export function FaqSection(){return <section className='faq section'><div className='faqIntro'><Eyebrow>Before you enquire</Eyebrow><h2>A few useful<br/><em>answers first.</em></h2><p>Enough information to make the first conversation easier — without turning the enquiry into a long form.</p></div><div className='faqList'>{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>{String(i+1).padStart(2,'0')}</span>{q}<b>+</b></summary><p>{a}</p></details>)}</div></section>}

@@ -1,1 +1,2 @@
-export function ProofStrip(){return <section className='proof'><div className='proofGrid'><div><strong>4.8★</strong><span>Google rating</span></div><div><strong>38</strong><span>Google reviews</span></div><div><strong>2015</strong><span>Established</span></div><div><strong>Delhi & beyond</strong><span>Destination coverage</span></div></div></section>}
+import {site} from '@/lib/site';
+export function ProofStrip(){return <section className='proof'><div className='proofGrid'><div><strong>{site.rating}★</strong><span>Google rating</span></div><div><strong>{site.reviewCount}</strong><span>Google reviews</span></div><div><strong>{site.established}</strong><span>Established</span></div><div><strong>Photo + video</strong><span>Wedding coverage</span></div></div></section>}

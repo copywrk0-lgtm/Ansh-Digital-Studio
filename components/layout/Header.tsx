@@ -5,7 +5,6 @@ import {useEffect,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import {navItems} from '@/data/nav';
 import {site} from '@/lib/site';
-import {BrandMark} from '@/components/ui/BrandMark';
 import {MobileMenu} from './MobileMenu';
 
 export function Header(){
@@ -31,13 +30,13 @@ export function Header(){
   return <>
     <header className={`nav ${scrolled||!isHome?'navSolid':''}`}>
       <Link className='brand' href='/' aria-label='Ansh Digital Studio home'>
-        <BrandMark/>
+        <span className='brandMark' aria-hidden='true'><i/></span>
         <span><b>ANSH</b><small>DIGITAL STUDIO</small></span>
       </Link>
       <nav className='desktopNav' aria-label='Primary navigation'>
         {navItems.slice(0,4).map(i=><Link key={i.label} href={i.href}>{i.label}</Link>)}
       </nav>
-      <a className='navCta' href={site.whatsapp} target='_blank' rel='noreferrer'><span>Check your date</span><b aria-hidden='true'>↗</b></a>
+      <a className='navCta' href={site.whatsapp} target='_blank' rel='noreferrer'>Pricing & availability ↗</a>
       <button className='menuButton' aria-label={open?'Close menu':'Open menu'} aria-expanded={open} aria-controls='mobile-navigation' onClick={()=>setOpen(!open)}>
         <span/><span/>
       </button>

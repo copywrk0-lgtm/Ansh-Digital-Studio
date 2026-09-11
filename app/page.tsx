@@ -11,8 +11,7 @@ import {CtaSection} from '@/components/sections/CtaSection';
 
 export const metadata:Metadata={
   title:'Wedding Photographer in Delhi',
-  description:'Warm, people-led wedding photography, candid portraits, pre-wedding stories and films by Ansh Digital Studio. Established 2015.',
-  alternates:{canonical:'/'},
+  description:'Wedding photography, bridal portraits, couple sessions, album design and films by Ansh Digital Studio.',
 };
 
 export default function Home(){return <main><Hero/><ProofStrip/><StorySection/><PortfolioSection/><ServicesSection/><ExperienceSection/><ReviewsSection/><FaqSection/><CtaSection/></main>}

@@ -1,35 +1,21 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {portfolio} from '@/data/portfolio';
 import {Eyebrow} from '@/components/ui/Eyebrow';
 
 export function PortfolioSection(){
-  const lead=portfolio[1];
-  const detail=portfolio[2];
-  const portrait=portfolio[4];
-  const story=portfolio[5];
+  const featured=[portfolio[0],portfolio[2],portfolio[4],portfolio[3]];
   return <section className='work'>
     <div className='workIntro section'>
-      <div><Eyebrow>Selected stories</Eyebrow><h2>Not poses.<br/><em>Pieces of the day.</em></h2></div>
-      <p>Portraits, rituals and details — presented with room to breathe instead of forcing every photograph into the same crop.</p>
+      <div><Eyebrow light>Selected work</Eyebrow><h2>Every frame should<br/><em>earn its place.</em></h2></div>
+      <p>A concise edit of couple portraits, bridal frames, ceremony atmosphere and wedding details. The photography leads; album design stays secondary.</p>
     </div>
-    <div className='featuredEditorial'>
-      <article className='featuredLead'>
-        <div className='featuredImage photoPlaceholder'><div className='photoPlaceholderMark'>ANSH<small>{lead.type}</small></div></div>
-        <div className='featuredCaption'><span>01 · {lead.type}</span><h3>{lead.title}</h3></div>
-      </article>
-      <div className='featuredRight'>
-        <article className='featuredWide'>
-          <div className='featuredImage photoPlaceholder'><div className='photoPlaceholderMark'>ANSH<small>{detail.type}</small></div></div>
-          <div className='featuredCaption'><span>02 · {detail.type}</span><h3>{detail.title}</h3></div>
-        </article>
-        <div className='featuredPair'>
-          {[portrait,story].map((p,i)=><article className='featuredSmall' key={p.n}>
-            <div className='featuredImage photoPlaceholder'><div className='photoPlaceholderMark'>ANSH<small>{p.type}</small></div></div>
-            <div className='featuredCaption'><span>0{i+3} · {p.type}</span><h3>{p.title}</h3></div>
-          </article>)}
-        </div>
-      </div>
+    <div className='featuredGrid'>
+      {featured.map((p,i)=><article className={`featuredProject fp${i+1}`} key={p.n}>
+        <div className='featuredImage'><Image src={p.image} alt={`${p.type}: ${p.title}`} fill className='cover' sizes='(max-width:800px) 100vw, 50vw'/></div>
+        <div className='featuredMeta'><span>{p.n} · {p.type}</span><h3>{p.title}</h3></div>
+      </article>)}
     </div>
-    <div className='workFooter'><Link href='/portfolio'>See the complete portfolio <span>↗</span></Link></div>
+    <div className='workFooter'><Link href='/portfolio'>View the complete portfolio <span>↗</span></Link></div>
   </section>;
 }
