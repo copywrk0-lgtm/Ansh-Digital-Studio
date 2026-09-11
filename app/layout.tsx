@@ -4,6 +4,7 @@ import './polish.css';
 import './final-polish.css';
 import './mobile-first.css';
 import './responsive.css';
+import './photo-reset.css';
 import {Header} from '@/components/layout/Header';
 import {Footer} from '@/components/layout/Footer';
 import {MobileBar} from '@/components/layout/MobileBar';
@@ -20,7 +21,6 @@ export default function RootLayout({children}:{children:React.ReactNode}){
     name:site.name,
     url:site.url,
     telephone:site.phone,
-    image:`${site.url}/images/wedding-collage-wide.jpg`,
     foundingDate:site.established,
     address:{'@type':'PostalAddress',streetAddress:'Block D, Laxmi Nagar',addressLocality:'Delhi',postalCode:'110092',addressCountry:'IN'},
     areaServed:['Delhi','India'],
