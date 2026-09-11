@@ -5,9 +5,9 @@ import {Eyebrow} from '@/components/ui/Eyebrow';
 import {site} from '@/lib/site';
 
 const featured=[
-  {...services[0],image:'/images/wedding-collage-wide.jpg',label:'The main story',href:'/portfolio'},
+  {...services[0],image:'/images/bride-red.jpg',label:'The main story',href:'/portfolio'},
   {...services[2],image:'/images/couple-stage.jpg',label:'Before the wedding',href:'/portfolio'},
-  {...services[3],image:'/images/peach-bride-collage.jpg',label:'Motion + sound',href:site.whatsapp},
+  {...services[3],image:'/images/wedding-collage-wide.jpg',label:'Motion + sound',href:site.whatsapp},
 ];
 
 export function ServicesSection(){
