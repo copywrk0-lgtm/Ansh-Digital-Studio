@@ -36,7 +36,7 @@ export function Header(){
       <nav className='desktopNav' aria-label='Primary navigation'>
         {navItems.slice(0,4).map(i=><Link key={i.label} href={i.href}>{i.label}</Link>)}
       </nav>
-      <a className='navCta' href={site.whatsapp} target='_blank' rel='noreferrer'>Check availability ↗</a>
+      <a className='navCta' href={site.whatsapp} target='_blank' rel='noreferrer'><span>Check your date</span><b aria-hidden='true'>↗</b></a>
       <button className='menuButton' aria-label={open?'Close menu':'Open menu'} aria-expanded={open} aria-controls='mobile-navigation' onClick={()=>setOpen(!open)}>
         <span/><span/>
       </button>
