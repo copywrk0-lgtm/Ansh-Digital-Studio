@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import {site} from '@/lib/site';
+import {BrandMark} from '@/components/ui/BrandMark';
 
 export function Footer(){
   return <footer className='footer'>
     <div className='footerBrand'>
-      <Link href='/'><span>A</span><strong>ANSH DIGITAL STUDIO</strong></Link>
+      <Link href='/'><BrandMark/><strong>ANSH DIGITAL STUDIO</strong></Link>
       <p>Wedding photography, portraits and films.<br/>{site.location} · Available beyond.</p>
     </div>
     <div className='footerLinks'>
