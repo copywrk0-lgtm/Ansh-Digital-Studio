@@ -16,10 +16,10 @@ export function Hero(){
           <Link className='heroSecondary' href='/portfolio'>View the portfolio</Link>
         </div>
       </div>
-      <div className='heroFoot'><span>4.8★ · 38 Google reviews</span><span>Available for destination celebrations</span></div>
+      <div className='heroFoot'><span>{site.rating}★ · {site.reviewCount} Google reviews</span><span>Available for destination celebrations</span></div>
     </div>
     <div className='heroImage'>
-      <Image src='/images/hero-bride.jpg' alt='Bride photographed by Ansh Digital Studio' fill priority quality={92} sizes='(max-width: 800px) 100vw, 50vw' className='cover'/>
+      <Image src='/images/hero-bride.jpg' alt='Bride photographed by Ansh Digital Studio' fill priority quality={88} sizes='(max-width: 800px) 100vw, 50vw' className='cover'/>
       <div className='heroImageShade'/>
       <span className='imageIndex'>01 / WEDDINGS</span>
     </div>
