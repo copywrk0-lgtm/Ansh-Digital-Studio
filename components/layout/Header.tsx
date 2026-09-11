@@ -5,6 +5,7 @@ import {useEffect,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import {navItems} from '@/data/nav';
 import {site} from '@/lib/site';
+import {BrandMark} from '@/components/ui/BrandMark';
 import {MobileMenu} from './MobileMenu';
 
 export function Header(){
@@ -30,7 +31,7 @@ export function Header(){
   return <>
     <header className={`nav ${scrolled||!isHome?'navSolid':''}`}>
       <Link className='brand' href='/' aria-label='Ansh Digital Studio home'>
-        <span className='brandMark' aria-hidden='true'>A</span>
+        <BrandMark/>
         <span><b>ANSH</b><small>DIGITAL STUDIO</small></span>
       </Link>
       <nav className='desktopNav' aria-label='Primary navigation'>
