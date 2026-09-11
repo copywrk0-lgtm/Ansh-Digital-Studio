@@ -16,7 +16,7 @@
 .serviceFeature{background:#fbf7f1;border:1px solid rgba(54,35,31,.12);min-width:0;overflow:hidden}
 .serviceFeature1{grid-row:1 / span 2}
 .serviceFeatureImage{position:relative;overflow:hidden;background:#e9ded1}
-.serviceFeature1 .serviceFeatureImage{min-height:720px;height:100%}
+.serviceFeature1 .serviceFeatureImage{height:720px}
 .serviceFeature2 .serviceFeatureImage,.serviceFeature3 .serviceFeatureImage{aspect-ratio:1.72}
 .serviceFeature .cover{transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .45s ease;filter:saturate(.97) contrast(1.015)}
 .serviceFeature:hover .cover{transform:scale(1.018);filter:saturate(1.03)}
@@ -51,7 +51,7 @@
 
 /* Better small-screen hierarchy */
 @media(max-width:980px){
-  .serviceFeature1 .serviceFeatureImage{min-height:620px}
+  .serviceFeature1 .serviceFeatureImage{height:620px}
   .faq{grid-template-columns:1fr;gap:52px}
   .faqIntro{position:static}
 }
