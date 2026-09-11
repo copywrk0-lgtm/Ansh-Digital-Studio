@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {Eyebrow} from '@/components/ui/Eyebrow';
 import {site} from '@/lib/site';
@@ -18,10 +17,8 @@ export function Hero(){
       </div>
       <div className='heroFoot'><span>{site.rating}★ · {site.reviewCount} Google reviews</span><span>Available for destination celebrations</span></div>
     </div>
-    <div className='heroImage'>
-      <Image src='/images/hero-bride.jpg' alt='Bride photographed by Ansh Digital Studio' fill priority quality={88} sizes='(max-width: 800px) 100vw, 50vw' className='cover'/>
-      <div className='heroImageShade'/>
-      <span className='imageIndex'>01 / WEDDINGS</span>
+    <div className='heroImage photoPlaceholder' aria-label='Photography placeholder'>
+      <div className='photoPlaceholderMark'>ANSH<small>verified photo set incoming</small></div>
     </div>
   </section>;
 }
