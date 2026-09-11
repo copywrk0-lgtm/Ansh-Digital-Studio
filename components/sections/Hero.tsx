@@ -1,1 +1,27 @@
-import Image from 'next/image';import {Eyebrow} from '@/components/ui/Eyebrow';export function Hero(){return <section className='hero'><Image src='/images/ansh-hero.jpg' alt='Wedding portrait by Ansh Digital Studio' fill priority className='cover'/><div className='heroShade'/><div className='heroTop'><span>Delhi · India</span><span>Wedding & Event Photography</span></div><div className='heroAside'><span><b>01</b>Weddings</span><span><b>02</b>Couples</span><span><b>03</b>Families</span><span><b>04</b>Destinations</span><small>More than photos.<br/>A feeling.</small></div><div className='heroContent'><Eyebrow light>Ansh Digital Studio</Eyebrow><h1>Stories,<br/><em>held in light.</em></h1><p>Wedding photography that feels warm, personal and alive — from quiet rituals to the moments everyone remembers.</p><div className='heroActions'><a className='heroPrimary' href='/portfolio'>View Portfolio ↗</a><a className='heroFilm' href='/portfolio'><i>▷</i>Watch Film</a></div></div></section>}
+import Image from 'next/image';
+import Link from 'next/link';
+import {Eyebrow} from '@/components/ui/Eyebrow';
+import {site} from '@/lib/site';
+
+export function Hero(){
+  return <section className='hero'>
+    <div className='heroCopy'>
+      <div className='heroMeta'><span>EST. 2015</span><span>{site.location}</span></div>
+      <div>
+        <Eyebrow light>Wedding photography · portraits · films</Eyebrow>
+        <h1>Stories,<br/><em>held in light.</em></h1>
+        <p>Warm, people-led wedding photography for the rituals, the portraits and the seconds nobody planned.</p>
+        <div className='heroActions'>
+          <Link className='heroPrimary' href='/portfolio'>View selected work ↗</Link>
+          <a className='heroSecondary' href={site.whatsapp} target='_blank' rel='noreferrer'>Check your date</a>
+        </div>
+      </div>
+      <div className='heroFoot'><span>4.8★ · 38 Google reviews</span><span>Available for destination celebrations</span></div>
+    </div>
+    <div className='heroImage'>
+      <Image src='/images/hero-bride.jpg' alt='Bride photographed by Ansh Digital Studio' fill priority quality={92} sizes='(max-width: 800px) 100vw, 50vw' className='cover'/>
+      <div className='heroImageShade'/>
+      <span className='imageIndex'>01 / WEDDINGS</span>
+    </div>
+  </section>;
+}
